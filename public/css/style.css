@@ -1,0 +1,157 @@
+/* importando fuente roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+/* declarando variables de los colores */
+:root{
+    --Amarillo: #EAC926;
+    --Azul: #03264C;
+    --Celeste: #1259c3;
+    --Gris-oscuro: #666;
+    --Gris-claro: #ebebeb;
+    --Verde: #39b54a;
+}
+
+
+/* dando forma al header */
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+body{
+    font-family: 'robota',sans-serif;
+}
+
+.logoPrinc{
+    width:100%;
+}
+
+.browser{
+    margin: 1rem;
+}
+
+header{
+    background-color: var(--Amarillo);
+}
+
+.cuotasAd{
+    display: flex;
+    align-items: center;
+    margin: 1rem;
+    justify-content: center;
+}
+
+nav {
+    background-color: var(--Gris-claro);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+}
+
+nav ul li{
+    margin: 1rem;
+}
+
+.burger-menu{
+    
+    background-color: var(--Gris-oscuro);
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+}
+.banner{
+    width: 100%;
+}
+
+/* comenzando el main */
+p{
+    font-size: 12px;
+}
+
+/* comienzo de las secciones */
+
+.productInfo{
+    font-family:'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--Gris-claro);
+    padding: 2rem;
+    margin: 1rem;
+    width: 20%;
+}
+
+.prodPrice{
+    font-size: 18px;
+}
+
+.prodDescont{
+    font-size: 16px;
+}
+
+.prodDescript{
+    font-size: 16px;
+}
+
+.productContainer{
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+}
+
+.sectionTitle{
+    text-align: center;
+    font-family: 'Roboto',sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+footer{
+    margin: 2rem;
+    padding: 2rem;
+    background-color: var(--Amarillo);
+
+}
+
+.footerItem{
+    text-align: center;
+    padding: 5rem;
+}
+
+.footerIcon{
+    font-size: 2em;
+    color: var(--Celeste);
+}
+
+.copyright{
+    font-size: 10px;
+}
+/* responsive */
+@media (max-width:700px) {
+    .productContainer{
+        display:flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .productInfo{
+        font-family:'Roboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        background-color: var(--Gris-claro);
+        padding: 2rem;
+        margin: 1rem;
+        width: 100%;
+    }
+}
