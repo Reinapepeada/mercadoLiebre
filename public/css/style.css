@@ -11,14 +11,18 @@
     --Verde: #39b54a;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Roboto";
+}
+
 
 /* dando forma al header */
 
-.encabezado{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+
 
 ul{
     list-style: none;
@@ -37,10 +41,7 @@ body{
     background-color: var(--Gris-claro);
 }
 
-.logoPrinc{
-    width:30%;
-    padding: 1rem;
-}
+
 /* -----------browser style ------------ */
 
 .browser input{
@@ -101,79 +102,195 @@ p{
 
 /* comienzo de las secciones */
 
-.productInfo{
-    font-family:'Roboto', sans-serif;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    background-color: var(--Gris-claro);
-    padding: 2rem;
-    margin: 1rem;
-    width: 15%;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    
-}
-
-.product_box{
-    box-sizing: border-box;
-}
-
-.prodPrice{
-    font-size: 2rem;
-    margin-right: 0.6rem;
-}
-
-.prodDescont{
-    font-size: 1.4rem;
-    color: var(--Verde);
-}
-
-.prodDescript{
-    font-size: 2rem;
-}
-
-.precio_descuento{
-    display: flex;
-    align-items: baseline;
-}
-
-.productContainer{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-main section article i{
-    display: block;
+/*BREACKPOINT MIN 361*/
+@media (min-width: 361px) {
+  .main-header .top-bar .copy-header {
+    text-align: right;
     font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    color: var(--Verde);
-    top: -15px;
+  }
+
+  .main-header .top-bar .copy-header,
+  .main-header .logo,
+  .main-header .search {
+    flex-basis: 32%;
+  }
+
+  .main-header .hamburguer-button {
+    display: none;
+  }
+
+  .main-header .main-navbar {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .main-header .main-navbar ul {
+    display: flex;
+  }
+
+  .main-header .main-navbar li {
+    margin: 10px;
+  }
+
+  .product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product-container article {
+    flex-basis: 48%;
+  }
+
+  .product-container h3 {
+    flex-basis: 100%;
+  }
 }
 
-.sectionTitle{
-    text-align: center;
-    font-family: 'Roboto',sans-serif;
-    font-size: 24px;
-    font-weight: bold;
+/*BREACKPOINT MIN 769*/
+@media (min-width: 769px) {
+  .main-header .logo {
+    width: 250px;
+  }
+
+  .main-header .top-bar,
+  .main-header .main-navbar {
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .main-header .top-bar {
+    align-items: center;
+  }
+
+  .main-header .main-navbar a {
+    font-size: 17px;
+    margin-top: 30px;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  footer div {
+    flex-basis: 32%;
+  }
+
+  footer .copyright {
+    flex-basis: 100%;
+  }
 }
+
+main {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.product-container h3 {
+  padding: 30px 0;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.product {
+  margin-bottom: 25px;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.5);
+  position: relative;
+}
+
+/* JUGAMOS CON EL HOVER */
+.product:hover {
+  box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.7);
+
+}
+
+/* HAGO WILLY CON EL TRUCK */
+.product:hover .product-info i {
+  transform: rotateZ(-90deg);
+
+}
+
+/* HAGO MUESTRO EL TITULO DEL PRODUCTO */
+.product:hover .product-info h5 {
+  opacity: 1;
+}
+
+.product img {
+  width: 100%;
+  padding: 20px;
+}
+
+.product .product-info {
+  background-color: #fff;
+  padding: 25px;
+  border-top: 1px solid #ebebeb;
+  position: relative;
+}
+
+.product .product-info i {
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  color: #39b54a;
+  border: 1px solid #39b54a;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 50;
+  right: 20px;
+  top: -15px;
+  transition: all 450ms;
+}
+
+.product .product-info .price-box {
+  display: flex;
+}
+
+.product .product-info .price {
+  font-size: 18px;
+  line-height: 20px;
+  flex-grow: 0.3;
+}
+
+.product .product-info .discount {
+  font-size: 16px;
+  line-height: 20px;
+  color: #39b54a;
+  flex-grow: 0.7;
+}
+
+.product .product-info h5 {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 20px;
+  opacity: 0;
+  transition: all 0.1s;
+}
+
+.product-container article {
+  flex-basis: 24%;
+}
+
+
+
+/* ---------------------------------------------------------- */
 
 footer{
     margin: 2rem;
     padding: 2rem;
     background-color: var(--Amarillo);
 }
-footer ul{
-    display: flex;
-    justify-content: space-between;
-}
+
 
 .footerItem{
     text-align: center;
@@ -193,161 +310,70 @@ footer ul{
 }
 
 
-
-
-
-/* lqqqqqqqqqqqqqqqqqqqqq */
-div.last-visit,
-div.offers{
+.desktop-nav{
+    display: none;
+}
+.mobile-nav{
     display: flex;
-    flex-wrap: wrap;
+    background-color:var(--Gris-claro);
+    padding: 1.5rem;
+    justify-content: space-between;
 }
-
-.price{
-    font-size: 18px;
-    width: 30%;
+.mobile-nav div i{
+    font-size: 1.2rem;
+    margin: 0.2rem;
 }
-
-.discount{
+.encabezado{
+    flex-direction: column;
+}
+.logoPrinc{
     width: 70%;
 }
 
-.discount,
-.description{
-    font-size: 16px;
-    font-weight: normal;
+footer ul{
+    flex-direction: column;
 }
 
-h3,
-.description{
-    color: #666;
-}
 
-.description{
-    display: none;
-    margin-top: 20px;
-}
 
-section.banner img{
-    width: 100%;
-}
-
-main{
-    width: 90%;
-    margin: 0 auto;
-}
-
-main section article{
-    background-color: #fff;    
-    margin: 10px 0px;
-}
-
-main section article img{
-    width: 100%;
-}
-
-main section article i,
-.discount{
-    color: #39b54a;
-}
-
-main section article i{
-    display: block;
-    font-size: 16px;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border: 1px solid #39b54a;
-    background-color: #FFF;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
-}
-
-main section h3{
-    margin: 20px 0px;
-}
-
-main section div.products article i{
-    transition: transform 1s;
-}
-
-main section div.products article:hover i{
-    transform: rotate(-90deg);
-}
-
-article div.main-article{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    border-top: 1px solid #ebebeb;
-    position: relative;
-    padding: 15px;
-}
-main section article:hover{
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-}
-main section article:hover .description{
-    display: block;
-}
-
-@media (min-width: 361px){
-    main section div.products{
+/* responsive */
+@media (min-width:700px) {
+    .productInfo{
+        font-family:'Roboto', sans-serif;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
+        text-align: center;
+        flex-direction: column;
+        background-color: var(--Gris-claro);
+        padding: 2rem;
+        margin: 1rem;
+        width: 15%;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+        
     }
-    
-    main section div.products article{
-        width: 45%;
-    }
-
-    .price,
-    .discount{
-        width: 50%;
-    }
-}
-
-@media (min-width: 769px){
-    main section div.products article{
-        width: 22%;
+    .productContainer{
+        display: flex;
+        justify-content: center;
+        width: 100%;
     }
     .desktop-nav{
-        display: none;
+        display: flex;
     }
     .mobile-nav{
-        display: flex;
-        background-color:var(--Gris-claro);
-        padding: 1.5rem;
-        justify-content: space-between;
-    }
-    .mobile-nav div i{
-        font-size: 2rem;
-        margin: 0.2rem;
+        display: none
     }
     .encabezado{
-        flex-direction: column;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: initial;
     }
     .logoPrinc{
-        width: 70%;
+        width:30%;
+        padding: 1rem;
     }
-
     footer ul{
-        flex-direction: column;
+        display: flex;
+        flex-direction: initial;
+        justify-content: space-between;
     }
 }
-
-
-/* qqqqqqqqqqqqqqqqqqqqqqqq */
-
-/*----------------- login css------------- */
-
-
-
-
-
-

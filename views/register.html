@@ -29,8 +29,8 @@
                     <li><a href="">Ayuda</a></li>
                 </ul>
                 <ul>
-                    <li><a href="register.html">Creá tu cuenta</a> <i class="far fa-id-card"></i></li>
-                    <li><a href="login.html">Ingresá</a> <i class="fas fa-sign-in"></i></li>
+                    <li><a href="/register">Creá tu cuenta</a> <i class="far fa-id-card"></i></li>
+                    <li><a href="/login">Ingresá</a> <i class="fas fa-sign-in"></i></li>
                     <li><a href="">Mis compras</a><i class="fa-solid fa-basket-shopping"></i></li>
                     <div class="burger-menu">
                         <i class="fa-solid fa-bars"></i>
@@ -48,73 +48,76 @@
         </nav>
         <img src="/images/img-home-banner.jpg" alt="banner" class="banner">
     </header>
-        <main>
-            <form action="/">
-                <div>
-                  <input type="text" name="nombre" placeholder="Nombre y apellido" />
-                </div>
-                <div>
-                  <input type="text" name="usuario" placeholder="Nombre de usuari@" />
-                </div>
-                <div>
-                  <h4>Fecha de nacimiento</h4>
-                  <input type="date" name="fecha" placeholder="aaa" />
-                </div>
-                <div>
-                  <input type="text" name="domicilio" placeholder="Domicilio" />
-                </div>
-                <div>
-                  <h4>Perfil de usuario</h4>
-                  <label for="perfil-comprador">
-                    <input type="radio" name="perfil" value="Comprador" id="perfil-comprador" />
-                    Comprador
-                  </label>
-                  <label for="perfil-vendedor">
-                    <input type="radio" name="perfil" value="vendedor" id="perfil-vendedor" />
-                    Vendedor
-                  </label>
-                </div>
-                <div class="input-categorias">
-                  <h4>Categorias de interes</h4>
-                  <label for="intereses-electro">
-                    <input type="checkbox" name="intereses" value="electro" id="intereses-electro" />
-                    Electro
-                  </label>
-                  <label for="intereses-moda">
-                    <input type="checkbox" name="intereses" value="moda" id="intereses-moda" />
-                    Moda
-                  </label>
-                  <label for="intereses-hogar">
-                    <input type="checkbox" name="intereses" value="hogar" id="intereses-hogar" />
-                    Hogar
-                  </label>
-                  <label for="intereses-jugueteria">
-                    <input type="checkbox" name="intereses" value="jugueteria" id="intereses-jugueteria" />
-                    Jugueteria
-                  </label>
-                  <label for="intereses-vidasana">
-                    <input type="checkbox" name="intereses" value="vidasana" id="intereses-vidasana" />
-                    Vida Sana
-                  </label>
-                </div>
-        
-                <div>
-                  <h4>Foto de usuario</h4>
-                  <input type="file" name="foto" />
-                </div>
-                <div>
-                  <input type="password" placeholder="Contrasena" />
-                </div>
-                <div>
-                  <input type="password" placeholder="Confirmar contrasena" />
-                </div>
-        
-                <div class="botones">
-                  <input type="submit" value="Enviar" />
-                  <input type="reset" value="Borrar" />
-                </div>
-              </form>
-        </main>
+    <main>
+      <div class="forms">
+        <h2>Crea tu cuenta</h2>
+        <form action="/">
+          <div>
+            <input type="text" name="nombre" placeholder="Nombre y apellido" />
+          </div>
+          <div>
+            <input type="text" name="usuario" placeholder="Nombre de usuari@" />
+          </div>
+          <div>
+            <h4>Fecha de nacimiento</h4>
+            <input type="date" name="fecha" placeholder="aaa" />
+          </div>
+          <div>
+            <input type="text" name="domicilio" placeholder="Domicilio" />
+          </div>
+          <div>
+            <h4>Perfil de usuario</h4>
+            <label for="perfil-comprador">
+              <input type="radio" name="perfil" value="Comprador" id="perfil-comprador" />
+              Comprador
+            </label>
+            <label for="perfil-vendedor">
+              <input type="radio" name="perfil" value="vendedor" id="perfil-vendedor" />
+              Vendedor
+            </label>
+          </div>
+          <div class="input-categorias">
+            <h4>Categorias de interes</h4>
+            <label for="intereses-electro">
+              <input type="checkbox" name="intereses" value="electro" id="intereses-electro" />
+              Electro
+            </label>
+            <label for="intereses-moda">
+              <input type="checkbox" name="intereses" value="moda" id="intereses-moda" />
+              Moda
+            </label>
+            <label for="intereses-hogar">
+              <input type="checkbox" name="intereses" value="hogar" id="intereses-hogar" />
+              Hogar
+            </label>
+            <label for="intereses-jugueteria">
+              <input type="checkbox" name="intereses" value="jugueteria" id="intereses-jugueteria" />
+              Jugueteria
+            </label>
+            <label for="intereses-vidasana">
+              <input type="checkbox" name="intereses" value="vidasana" id="intereses-vidasana" />
+              Vida Sana
+            </label>
+          </div>
+  
+          <div>
+            <h4>Foto de usuario</h4>
+            <input type="file" name="foto" />
+          </div>
+          <div>
+            <input type="password" placeholder="Contrasena" />
+          </div>
+          <div>
+            <input type="password" placeholder="Confirmar contrasena" />
+          </div>
+  
+          <div class="botones">
+            <input type="submit" value="Enviar" />
+            <input type="reset" value="Borrar" />
+          </div>
+        </form>
+      </div>
+    </main>
         <footer>
             <ul>
                 <div class="footerItem">

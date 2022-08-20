@@ -3,7 +3,7 @@ const app=express();
 const path=require("path")
 
 app.listen(process.env.PORT || 3000,()=>{
-    console.log("El server esta arriba en el puerto 3030")
+    console.log("El server esta arriba en el puerto 3000")
 })
 app.get("/",(req,res)=>{
     res.sendFile(path.join(__dirname,"./views/home.html"))
